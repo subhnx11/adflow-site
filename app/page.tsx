@@ -258,7 +258,7 @@ export default function Home() {
             </a>
 
             <a
-              href="https://wa.me/923001234567"
+              href="https://wa.me/923237611331"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[250px]"
@@ -311,10 +311,10 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block text-xl px-10 py-5">
+            <a href="https://wa.me/923237611331" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block text-xl px-10 py-5">
               WhatsApp Us Now →
             </a>
-            <a href="mailto:contact@adflow.pk" className="btn-secondary inline-block text-xl px-10 py-5">
+            <a href="mailto:adflow.sales@gmail.com" className="btn-secondary inline-block text-xl px-10 py-5">
               Send Email
             </a>
           </div>
