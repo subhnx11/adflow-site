@@ -5,10 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #0F172A;
+  --primary: #0F0A1E;
   --accent: #8b46f9;
-  --secondary: #1E293B;
+  --secondary: #1a1332;
   --light: #F8FAFC;
+  --purple-light: #a66bff;
+  --purple-dark: #6b2fc7;
 }
 
 * {
@@ -25,6 +27,7 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #0a0515;
 }
 
 @layer utilities {
@@ -37,20 +40,32 @@ body {
   }
   
   .gradient-text {
-    background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    background: linear-gradient(135deg, #8b46f9 0%, #a66bff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+  }
+  
+  .gradient-purple {
+    background: linear-gradient(135deg, #8b46f9 0%, #6b2fc7 100%);
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-amber-500 to-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl active:scale-95;
+    @apply bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 active:scale-95;
+    background: linear-gradient(to right, #8b46f9, #a66bff, #8b46f9);
+    box-shadow: 0 4px 20px rgba(139, 70, 249, 0.4);
   }
   
   .btn-secondary {
-    @apply bg-slate-900 text-white px-8 py-4 rounded-full font-semibold text-lg border-2 border-amber-500/20 transition-all duration-300 hover:border-amber-500 hover:shadow-xl;
+    @apply bg-slate-950 text-white px-8 py-4 rounded-full font-semibold text-lg border-2 transition-all duration-300 hover:shadow-xl;
+    border-color: rgba(139, 70, 249, 0.3);
+  }
+  
+  .btn-secondary:hover {
+    border-color: #8b46f9;
+    box-shadow: 0 10px 30px rgba(139, 70, 249, 0.3);
   }
   
   .section-padding {
@@ -62,19 +77,46 @@ body {
   }
 }
 
+/* Custom scrollbar with purple */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0F172A;
+  background: #0a0515;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #F59E0B 0%, #EF4444 100%);
+  background: linear-gradient(180deg, #8b46f9 0%, #6b2fc7 100%);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #EF4444 0%, #F59E0B 100%);
+  background: linear-gradient(180deg, #a66bff 0%, #8b46f9 100%);
+}
+
+/* Purple glow effects */
+.purple-glow {
+  box-shadow: 0 0 40px rgba(139, 70, 249, 0.3);
+}
+
+.purple-glow-hover:hover {
+  box-shadow: 0 0 60px rgba(139, 70, 249, 0.5);
+  border-color: #8b46f9;
+}
+
+/* Animated purple gradient background */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(135deg, #8b46f9, #a66bff, #6b2fc7, #8b46f9);
+  background-size: 200% 200%;
+  animation: gradient-shift 10s ease infinite;
 }
