@@ -1,0 +1,327 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
+export default function Home() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <main className="bg-slate-950 text-white overflow-x-hidden">
+      {/* Navigation */}
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-slate-950/95 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-20">
+            <div className="text-2xl font-display font-bold">
+              <span className="gradient-text">ELITE</span> AGENCY
+            </div>
+            <div className="hidden md:flex items-center space-x-8">
+              <a href="#services" className="hover:text-amber-500 transition-colors">Services</a>
+              <a href="#results" className="hover:text-amber-500 transition-colors">Results</a>
+              <a href="#testimonials" className="hover:text-amber-500 transition-colors">Testimonials</a>
+              <a href="#cta" className="btn-primary">Get Started</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center grain">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black opacity-90"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-amber-500/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="container-custom relative z-10 text-center animate-fade-in">
+          <div className="inline-block mb-4 px-6 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 font-semibold">
+            🔥 Join 50K+ Growing Businesses
+          </div>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 leading-tight">
+            Scale Your Business
+            <br />
+            <span className="gradient-text">To 7-Figures</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light">
+            Get exclusive marketing strategies, personalized coaching, and proven systems that generate real results. 
+            <span className="text-amber-500 font-semibold"> 100% FREE to join.</span>
+          </p>
+          
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+            <a href="#cta" className="btn-primary w-full sm:w-auto">
+              Start Free Consultation →
+            </a>
+            <a href="#results" className="btn-secondary w-full sm:w-auto">
+              See Case Studies
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">50K+</div>
+              <div className="text-slate-400">Active Clients</div>
+            </div>
+            <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">$100M+</div>
+              <div className="text-slate-400">Revenue Generated</div>
+            </div>
+            <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">98%</div>
+              <div className="text-slate-400">Success Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section id="services" className="section-padding bg-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0 grain opacity-50"></div>
+        <div className="container-custom relative z-10">
+          <div className="text-center mb-16 animate-slide-up">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
+              What You Get <span className="gradient-text">(FREE)</span>
+            </h2>
+            <p className="text-xl text-slate-400">Everything you need to dominate your market</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: '📊',
+                title: 'Marketing Strategy',
+                description: 'Personalized growth blueprints designed for your specific industry and goals'
+              },
+              {
+                icon: '🎯',
+                title: 'Expert Coaching',
+                description: 'Weekly live sessions with our team of 7-figure marketing experts'
+              },
+              {
+                icon: '💡',
+                title: 'Done-For-You Campaigns',
+                description: 'Pre-built funnels, ad templates, and email sequences that convert'
+              },
+              {
+                icon: '🚀',
+                title: 'Private Community',
+                description: '24/7 support from fellow entrepreneurs and our expert moderators'
+              }
+            ].map((service, i) => (
+              <div 
+                key={i} 
+                className="group bg-slate-950 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/20"
+                style={{animationDelay: `${i * 0.1}s`}}
+              >
+                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">{service.icon}</div>
+                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <p className="text-slate-400">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Results Showcase */}
+      <section id="results" className="section-padding bg-black relative">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
+              We're Living The <span className="gradient-text">Dream</span>
+            </h2>
+            <p className="text-xl text-slate-400">Built through proven marketing systems and relentless execution</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
+            {[
+              { type: 'image', src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop' },
+              { type: 'video', title: 'From $0 to $1M/mo in 6 months' },
+              { type: 'image', src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop' },
+              { type: 'video', title: 'Building an 8-figure agency' },
+              { type: 'image', src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop' },
+              { type: 'video', title: 'My morning routine as a CEO' },
+            ].map((item, i) => (
+              <div key={i} className="relative group overflow-hidden rounded-xl aspect-[4/3] bg-slate-900">
+                {item.type === 'image' ? (
+                  <img 
+                    src={item.src} 
+                    alt={`Success ${i + 1}`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-slate-800 to-slate-900">
+                    <div className="text-center p-6">
+                      <div className="w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/>
+                        </svg>
+                      </div>
+                      <p className="text-sm font-semibold">{item.title}</p>
+                    </div>
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href="#cta" className="btn-primary inline-block">
+              Join Our Success Stories →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section id="testimonials" className="section-padding bg-slate-900">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
+              Real Results From <span className="gradient-text">Real Clients</span>
+            </h2>
+            <p className="text-xl text-slate-400">See what our clients are saying about their transformation</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[...Array(9)].map((_, i) => (
+              <div key={i} className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden hover:border-amber-500 transition-colors">
+                <img 
+                  src={`https://images.unsplash.com/photo-${1500000000000 + i * 10000000}?w=400&h=500&fit=crop`}
+                  alt={`Testimonial ${i + 1}`}
+                  className="w-full h-64 object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = `https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=500&fit=crop`
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <a href="#cta" className="btn-secondary inline-block">
+              Be Our Next Success Story →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="section-padding bg-black">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
+              Follow For Daily <span className="gradient-text">Business Tips</span>
+            </h2>
+            <p className="text-xl text-slate-400">Get exclusive insights, case studies, and motivation</p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { platform: 'Instagram', handle: '@youragency', followers: '500K+' },
+              { platform: 'TikTok', handle: '@youragency', followers: '1M+' },
+              { platform: 'YouTube', handle: 'Your Agency', followers: '250K+' },
+            ].map((social, i) => (
+              <a
+                key={i}
+                href="#"
+                className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[200px]"
+              >
+                <div className="text-center">
+                  <div className="text-3xl font-bold gradient-text mb-2">{social.followers}</div>
+                  <div className="text-slate-400 mb-1">{social.platform}</div>
+                  <div className="text-sm text-slate-500">{social.handle}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section id="cta" className="section-padding bg-gradient-to-br from-slate-900 via-slate-950 to-black relative overflow-hidden">
+        <div className="absolute inset-0 grain"></div>
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/20 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container-custom relative z-10 text-center">
+          <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
+            Ready To Scale Your Business?
+          </h2>
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
+            Join our exclusive community and get instant access to all our strategies, tools, and expert support.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+            <div className="flex items-center gap-2 text-green-500">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
+              <span>100% Free Access</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-500">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
+              <span>Instant Setup</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-500">
+              <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+              </svg>
+              <span>No Credit Card Required</span>
+            </div>
+          </div>
+
+          <a href="mailto:contact@youragency.com" className="btn-primary inline-block text-2xl px-12 py-6">
+            Book Free Consultation Now →
+          </a>
+
+          <p className="mt-8 text-sm text-slate-500">
+            ⚠️ Limited spots available. We only take 50 new clients per month to ensure quality service.
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-slate-950 border-t border-slate-900 py-12">
+        <div className="container-custom">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="text-2xl font-display font-bold mb-4">
+                <span className="gradient-text">ELITE</span> AGENCY
+              </div>
+              <p className="text-slate-400">Building 7-figure businesses through proven marketing systems.</p>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Quick Links</h3>
+              <div className="space-y-2">
+                <a href="#services" className="block text-slate-400 hover:text-amber-500 transition-colors">Services</a>
+                <a href="#results" className="block text-slate-400 hover:text-amber-500 transition-colors">Results</a>
+                <a href="#testimonials" className="block text-slate-400 hover:text-amber-500 transition-colors">Testimonials</a>
+              </div>
+            </div>
+            <div>
+              <h3 className="font-bold mb-4">Legal</h3>
+              <div className="space-y-2">
+                <a href="#" className="block text-slate-400 hover:text-amber-500 transition-colors">Privacy Policy</a>
+                <a href="#" className="block text-slate-400 hover:text-amber-500 transition-colors">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-slate-900 pt-8 text-center text-slate-500">
+            © 2025 Elite Marketing Agency. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </main>
+  )
+}
