@@ -45,7 +45,7 @@ export default function Home() {
             🔥 Pakistan's Premier Marketing Agency
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 leading-tight">
-            TEST TEST TEST
+            Scale Your Brand
             <br />
             <span className="gradient-text">With AdFlow</span>
           </h1>
@@ -333,7 +333,7 @@ export default function Home() {
               <div className="text-2xl font-display font-bold mb-4">
                 <span className="gradient-text">AdFlow</span>.pk
               </div>
-              <p className="text-slate-400">Pakistan's premier marketing agency helping brands grow through social media, paid ads, and content creation.</p>
+              <p className="text-slate-400">Pakistan's Premier Marketing Agency helping brands grow through Social Media, Paid Ads and Content creation.</p>
             </div>
             <div>
               <h3 className="font-bold mb-4">Quick Links</h3>
@@ -347,8 +347,8 @@ export default function Home() {
             <div>
               <h3 className="font-bold mb-4">Contact</h3>
               <div className="space-y-2 text-slate-400">
-                <p>📧 contact@adflow.pk</p>
-                <p>📱 WhatsApp: +92 300 1234567</p>
+                <p>📧 adflow.sales@gmail.com</p>
+                <p>📱 WhatsApp: +92 323 7611331</p>
                 <p>📍 Pakistan</p>
               </div>
             </div>
