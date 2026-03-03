@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Elite Marketing Agency | Scale Your Business 10X',
-  description: 'Join thousands of businesses crushing their marketing goals. Expert strategies, proven results, personalized mentorship.',
+  title: 'AdFlow.pk | Premium Marketing Agency in Pakistan',
+  description: 'Scale your brand with AdFlow - Pakistan\'s leading marketing agency. Social media marketing, paid advertising, content creation & brand strategy.',
 }
 
 export default function RootLayout({

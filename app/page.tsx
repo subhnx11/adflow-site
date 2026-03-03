@@ -20,7 +20,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-20">
             <div className="text-2xl font-display font-bold">
-              <span className="gradient-text">ELITE</span> AGENCY
+              <span className="gradient-text">AdFlow</span>.pk
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="hover:text-amber-500 transition-colors">Services</a>
@@ -42,40 +42,40 @@ export default function Home() {
         
         <div className="container-custom relative z-10 text-center animate-fade-in">
           <div className="inline-block mb-4 px-6 py-2 bg-amber-500/10 border border-amber-500/30 rounded-full text-amber-500 font-semibold">
-            🔥 Join 50K+ Growing Businesses
+            🔥 Pakistan's Premier Marketing Agency
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-black mb-6 leading-tight">
-            Scale Your Business
+            Scale Your Brand
             <br />
-            <span className="gradient-text">To 7-Figures</span>
+            <span className="gradient-text">With AdFlow</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light">
-            Get exclusive marketing strategies, personalized coaching, and proven systems that generate real results. 
-            <span className="text-amber-500 font-semibold"> 100% FREE to join.</span>
+            Premium social media marketing, paid advertising, and brand growth strategies for Pakistani businesses. 
+            <span className="text-amber-500 font-semibold"> Results-driven. Performance-focused.</span>
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <a href="#cta" className="btn-primary w-full sm:w-auto">
-              Start Free Consultation →
+              Book Free Strategy Call →
             </a>
             <a href="#results" className="btn-secondary w-full sm:w-auto">
-              See Case Studies
+              View Our Work
             </a>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
-              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">50K+</div>
-              <div className="text-slate-400">Active Clients</div>
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">200+</div>
+              <div className="text-slate-400">Brands Scaled</div>
             </div>
             <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
-              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">$100M+</div>
-              <div className="text-slate-400">Revenue Generated</div>
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">500M+</div>
+              <div className="text-slate-400">Impressions Generated</div>
             </div>
             <div className="bg-slate-900/50 backdrop-blur-sm border border-amber-500/20 rounded-2xl p-6">
-              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">98%</div>
-              <div className="text-slate-400">Success Rate</div>
+              <div className="text-4xl md:text-5xl font-display font-bold gradient-text mb-2">5X</div>
+              <div className="text-slate-400">Average ROAS</div>
             </div>
           </div>
         </div>
@@ -87,32 +87,32 @@ export default function Home() {
         <div className="container-custom relative z-10">
           <div className="text-center mb-16 animate-slide-up">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-              What You Get <span className="gradient-text">(FREE)</span>
+              Our <span className="gradient-text">Services</span>
             </h2>
-            <p className="text-xl text-slate-400">Everything you need to dominate your market</p>
+            <p className="text-xl text-slate-400">Full-stack marketing solutions to grow your brand</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                icon: '📊',
-                title: 'Marketing Strategy',
-                description: 'Personalized growth blueprints designed for your specific industry and goals'
+                icon: '📱',
+                title: 'Social Media Marketing',
+                description: 'Instagram, Facebook, TikTok management with content creation and community building'
               },
               {
                 icon: '🎯',
-                title: 'Expert Coaching',
-                description: 'Weekly live sessions with our team of 7-figure marketing experts'
+                title: 'Paid Advertising',
+                description: 'Meta Ads, Google Ads, and TikTok Ads campaigns optimized for maximum ROI'
               },
               {
-                icon: '💡',
-                title: 'Done-For-You Campaigns',
-                description: 'Pre-built funnels, ad templates, and email sequences that convert'
+                icon: '🎨',
+                title: 'Content Creation',
+                description: 'Professional graphics, videos, and copywriting that converts and engages'
               },
               {
-                icon: '🚀',
-                title: 'Private Community',
-                description: '24/7 support from fellow entrepreneurs and our expert moderators'
+                icon: '📊',
+                title: 'Brand Strategy',
+                description: 'Complete brand positioning, messaging, and growth roadmaps tailored to Pakistan market'
               }
             ].map((service, i) => (
               <div 
@@ -134,25 +134,25 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-              We're Living The <span className="gradient-text">Dream</span>
+              Real Results For <span className="gradient-text">Real Brands</span>
             </h2>
-            <p className="text-xl text-slate-400">Built through proven marketing systems and relentless execution</p>
+            <p className="text-xl text-slate-400">Check out some of our latest campaigns and success stories</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             {[
               { type: 'image', src: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&h=400&fit=crop' },
-              { type: 'video', title: 'From $0 to $1M/mo in 6 months' },
+              { type: 'video', title: '10X Instagram Growth in 3 Months' },
               { type: 'image', src: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop' },
-              { type: 'video', title: 'Building an 8-figure agency' },
+              { type: 'video', title: 'Rs. 5M Revenue From Paid Ads' },
               { type: 'image', src: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop' },
-              { type: 'video', title: 'My morning routine as a CEO' },
+              { type: 'video', title: 'Building a Viral Brand Campaign' },
             ].map((item, i) => (
               <div key={i} className="relative group overflow-hidden rounded-xl aspect-[4/3] bg-slate-900">
                 {item.type === 'image' ? (
                   <img 
                     src={item.src} 
-                    alt={`Success ${i + 1}`}
+                    alt={`Project ${i + 1}`}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 ) : (
@@ -173,8 +173,8 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <a href="#cta" className="btn-primary inline-block">
-              Join Our Success Stories →
+            <a href="https://www.instagram.com/adflow.pk" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block">
+              View More on Instagram →
             </a>
           </div>
         </div>
@@ -185,30 +185,35 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-display font-bold mb-4">
-              Real Results From <span className="gradient-text">Real Clients</span>
+              What Our <span className="gradient-text">Clients Say</span>
             </h2>
-            <p className="text-xl text-slate-400">See what our clients are saying about their transformation</p>
+            <p className="text-xl text-slate-400">Trusted by leading brands across Pakistan</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {[...Array(9)].map((_, i) => (
-              <div key={i} className="bg-slate-950 border border-slate-800 rounded-xl overflow-hidden hover:border-amber-500 transition-colors">
-                <img 
-                  src={`https://images.unsplash.com/photo-${1500000000000 + i * 10000000}?w=400&h=500&fit=crop`}
-                  alt={`Testimonial ${i + 1}`}
-                  className="w-full h-64 object-cover"
-                  onError={(e) => {
-                    e.currentTarget.src = `https://images.unsplash.com/photo-1557804506-669a67965ba0?w=400&h=500&fit=crop`
-                  }}
-                />
+            {[...Array(6)].map((_, i) => (
+              <div key={i} className="bg-slate-950 border border-slate-800 rounded-xl p-6 hover:border-amber-500 transition-colors">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-amber-500 to-orange-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    {String.fromCharCode(65 + i)}
+                  </div>
+                  <div className="ml-4">
+                    <div className="font-bold">Happy Client {i + 1}</div>
+                    <div className="text-sm text-slate-400">CEO, Brand Name</div>
+                  </div>
+                </div>
+                <p className="text-slate-300 mb-4">
+                  "AdFlow transformed our social media presence completely. Their team is professional, creative, and results-driven. Highly recommend!"
+                </p>
+                <div className="flex text-amber-500">
+                  {[...Array(5)].map((_, j) => (
+                    <svg key={j} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                    </svg>
+                  ))}
+                </div>
               </div>
             ))}
-          </div>
-
-          <div className="text-center">
-            <a href="#cta" className="btn-secondary inline-block">
-              Be Our Next Success Story →
-            </a>
           </div>
         </div>
       </section>
@@ -218,29 +223,53 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">
-              Follow For Daily <span className="gradient-text">Business Tips</span>
+              Follow Us For Daily <span className="gradient-text">Marketing Tips</span>
             </h2>
-            <p className="text-xl text-slate-400">Get exclusive insights, case studies, and motivation</p>
+            <p className="text-xl text-slate-400">Behind-the-scenes, case studies, and exclusive content</p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {[
-              { platform: 'Instagram', handle: '@youragency', followers: '500K+' },
-              { platform: 'TikTok', handle: '@youragency', followers: '1M+' },
-              { platform: 'YouTube', handle: 'Your Agency', followers: '250K+' },
-            ].map((social, i) => (
-              <a
-                key={i}
-                href="#"
-                className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[200px]"
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text mb-2">{social.followers}</div>
-                  <div className="text-slate-400 mb-1">{social.platform}</div>
-                  <div className="text-sm text-slate-500">{social.handle}</div>
-                </div>
-              </a>
-            ))}
+            <a
+              href="https://www.instagram.com/adflow.pk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[250px]"
+            >
+              <div className="text-center">
+                <div className="text-5xl mb-4">📱</div>
+                <div className="text-3xl font-bold gradient-text mb-2">Instagram</div>
+                <div className="text-slate-400 mb-1">@adflow.pk</div>
+                <div className="text-sm text-slate-500">Follow for daily content</div>
+              </div>
+            </a>
+
+            <a
+              href="https://www.facebook.com/adflow.pk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[250px]"
+            >
+              <div className="text-center">
+                <div className="text-5xl mb-4">👍</div>
+                <div className="text-3xl font-bold gradient-text mb-2">Facebook</div>
+                <div className="text-slate-400 mb-1">@adflow.pk</div>
+                <div className="text-sm text-slate-500">Join our community</div>
+              </div>
+            </a>
+
+            <a
+              href="https://wa.me/923001234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-all duration-300 hover:scale-105 min-w-[250px]"
+            >
+              <div className="text-center">
+                <div className="text-5xl mb-4">💬</div>
+                <div className="text-3xl font-bold gradient-text mb-2">WhatsApp</div>
+                <div className="text-slate-400 mb-1">Quick Response</div>
+                <div className="text-sm text-slate-500">Message us anytime</div>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -254,10 +283,10 @@ export default function Home() {
         
         <div className="container-custom relative z-10 text-center">
           <h2 className="text-4xl md:text-6xl font-display font-bold mb-6">
-            Ready To Scale Your Business?
+            Ready To Grow Your Brand?
           </h2>
           <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto">
-            Join our exclusive community and get instant access to all our strategies, tools, and expert support.
+            Let's discuss your marketing goals and create a custom strategy for your business.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
@@ -265,28 +294,33 @@ export default function Home() {
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
-              <span>100% Free Access</span>
+              <span>Free Strategy Session</span>
             </div>
             <div className="flex items-center gap-2 text-green-500">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
-              <span>Instant Setup</span>
+              <span>No Commitment Required</span>
             </div>
             <div className="flex items-center gap-2 text-green-500">
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
               </svg>
-              <span>No Credit Card Required</span>
+              <span>Custom Proposal</span>
             </div>
           </div>
 
-          <a href="mailto:contact@youragency.com" className="btn-primary inline-block text-2xl px-12 py-6">
-            Book Free Consultation Now →
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" className="btn-primary inline-block text-xl px-10 py-5">
+              WhatsApp Us Now →
+            </a>
+            <a href="mailto:contact@adflow.pk" className="btn-secondary inline-block text-xl px-10 py-5">
+              Send Email
+            </a>
+          </div>
 
           <p className="mt-8 text-sm text-slate-500">
-            ⚠️ Limited spots available. We only take 50 new clients per month to ensure quality service.
+            📍 Based in Pakistan | Serving brands nationwide
           </p>
         </div>
       </section>
@@ -297,28 +331,30 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <div className="text-2xl font-display font-bold mb-4">
-                <span className="gradient-text">ELITE</span> AGENCY
+                <span className="gradient-text">AdFlow</span>.pk
               </div>
-              <p className="text-slate-400">Building 7-figure businesses through proven marketing systems.</p>
+              <p className="text-slate-400">Pakistan's premier marketing agency helping brands grow through social media, paid ads, and content creation.</p>
             </div>
             <div>
               <h3 className="font-bold mb-4">Quick Links</h3>
               <div className="space-y-2">
                 <a href="#services" className="block text-slate-400 hover:text-amber-500 transition-colors">Services</a>
-                <a href="#results" className="block text-slate-400 hover:text-amber-500 transition-colors">Results</a>
+                <a href="#results" className="block text-slate-400 hover:text-amber-500 transition-colors">Portfolio</a>
                 <a href="#testimonials" className="block text-slate-400 hover:text-amber-500 transition-colors">Testimonials</a>
+                <a href="https://www.instagram.com/adflow.pk" target="_blank" rel="noopener noreferrer" className="block text-slate-400 hover:text-amber-500 transition-colors">Instagram</a>
               </div>
             </div>
             <div>
-              <h3 className="font-bold mb-4">Legal</h3>
-              <div className="space-y-2">
-                <a href="#" className="block text-slate-400 hover:text-amber-500 transition-colors">Privacy Policy</a>
-                <a href="#" className="block text-slate-400 hover:text-amber-500 transition-colors">Terms of Service</a>
+              <h3 className="font-bold mb-4">Contact</h3>
+              <div className="space-y-2 text-slate-400">
+                <p>📧 contact@adflow.pk</p>
+                <p>📱 WhatsApp: +92 300 1234567</p>
+                <p>📍 Pakistan</p>
               </div>
             </div>
           </div>
           <div className="border-t border-slate-900 pt-8 text-center text-slate-500">
-            © 2025 Elite Marketing Agency. All rights reserved.
+            © 2025 AdFlow.pk. All rights reserved.
           </div>
         </div>
       </footer>
